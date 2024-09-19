@@ -1,0 +1,121 @@
+:root {
+    /* CSS HEX Colors */
+    --feldgrau: #3b5249ff;
+    --cadet-gray: #93acb5ff;
+    --pale-dogwood: #f2ccc3ff;
+    --light-coral: #e78f8eff;
+    --salmon-pink: #f48498ff;
+
+    /* CSS HSL Colors */
+    --feldgrau-hsl: hsla(157, 16%, 28%, 1);
+    --cadet-gray-hsl: hsla(196, 19%, 64%, 1);
+    --pale-dogwood-hsl: hsla(11, 64%, 86%, 1);
+    --light-coral-hsl: hsla(1, 65%, 73%, 1);
+    --salmon-pink-hsl: hsla(349, 84%, 74%, 1);
+
+    /* CSS Gradients */
+    --gradient-top: linear-gradient(0deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-right: linear-gradient(90deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-bottom: linear-gradient(180deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-left: linear-gradient(270deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-top-right: linear-gradient(45deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-bottom-right: linear-gradient(135deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-top-left: linear-gradient(225deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-bottom-left: linear-gradient(315deg, var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+    --gradient-radial: radial-gradient(var(--feldgrau), var(--cadet-gray), var(--pale-dogwood), var(--light-coral), var(--salmon-pink));
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--salmon-pink); /* Using the HEX value */
+    /* Or, if you prefer the HSL value: */
+    /* background-color: var(--cadet-gray-hsl); */
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 5rem;
+    color: white;
+}
+
+.wrapper {
+  padding: 20px;
+  background-color: var(--salmon-pink); /* Using the HEX value */
+
+
+  .content {
+    padding: 2.5rem;
+    background-color: var(--feldgrau); /* You can also define variables for this */
+
+  }
+
+  .about {
+    padding: 5rem;
+    border-top: 1rem solid white;
+    border-bottom: 1rem solid white;
+    /* border-top: 1rem solid var(--light-coral); */
+    /* border-bottom: 1rem solid var(--light-coral); */
+    background-color: var(--cadet-gray);
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 5rem;
+    color: white;
+  }
+}
+.projects {
+  background-color: var(--cadet-gray);
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    .card {
+      margin-top: 1rem;
+      background-color: white;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      display: grid;
+      grid-template-areas: "inner-div";
+      .badges {
+        grid-area: inner-div;
+        height: 300px;
+        display: grid;
+        z-index: 1;
+        .badge {
+          /* widows: auto; */
+
+          /* height: 100%; */
+          transition: transform 0.3s ease;
+        }
+      }
+      .card-content {
+        grid-area: inner-div;
+        background-color: blue;
+        z-index: 2;
+      }
+      .badge:nth-child(1) {
+        transition-delay: 0.2s;
+      }
+      .badge:nth-child(2) {
+        transition-delay: 0.3s;
+      }
+      .badge:nth-child(3) {
+        transition-delay: 0.4s;
+      }
+      .badge:nth-child(4) {
+        transition-delay: 0.5s;
+      }
+      .badge:nth-child(5) {
+        transition-delay: 0.6s;
+      }
+    }
+  }
+  .card:hover .badge {
+    transform: translateX(300px);
+  }
+}
