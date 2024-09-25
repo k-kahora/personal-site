@@ -98,6 +98,7 @@ p {
       margin-bottom: 1rem;
       background-color: white;
       width: 300px;
+      max-width: 300px;
       /* height: 300px; */
       position: relative;
       display: grid;
@@ -146,6 +147,9 @@ p {
         }
         .nixos:hover {
           box-shadow: #7EBAE4 0px 13px 10px -5px, #5277C3 0px 8px 6px -8px;
+        }
+        .netapp:hover {
+          box-shadow: #0067C5 0px 13px 10px -5px, #0067C5 0px 8px 6px -8px;
         }
         .description {
           font-size: 1rem;
